@@ -1,0 +1,38 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {
+
+    // =========================
+    // PRODUCTS
+    // Public can read
+    // Only authenticated admins can write
+    // =========================
+    match /products/{productId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+
+    // =========================
+    // SETTINGS
+    // Hero banner
+    // Theme colors
+    // Social links
+    // =========================
+    match /settings/{settingId} {
+      allow read: if true;
+      allow create, update: if request.auth != null;
+    }
+
+    // =========================
+    // SHOP GALLERY
+    // =========================
+    match /gallery/{imageId} {
+      allow read: if true;
+      allow create, update, delete: if request.auth != null;
+    }
+
+  }
+
+}

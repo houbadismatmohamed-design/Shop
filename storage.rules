@@ -1,0 +1,29 @@
+rules_version = '2';
+
+service firebase.storage {
+
+  match /b/{bucket}/o {
+
+    // ==========================
+    // Shop Gallery Images
+    // ==========================
+    match /gallery/{allPaths=**} {
+
+      // Everyone can view gallery images
+      allow read: if true;
+
+      // Only authenticated admins can upload,
+      // replace or delete images
+      allow write: if request.auth != null;
+    }
+
+    // ==========================
+    // Deny access to all other files
+    // ==========================
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+
+  }
+
+}
