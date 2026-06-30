@@ -11,29 +11,21 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth
 
 import { getStorage } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-storage.js";
 
-/*==================================================
-PUT YOUR FIREBASE CONFIG HERE
-==================================================*/
-
 const firebaseConfig = {
 
-    apiKey: "YOUR_API_KEY",
+    apiKey: "AIzaSyCs_dPHKTD8Sn5YnCJyCIo91jKuVb-iQzY",
 
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
+    authDomain: "ok-mobile-13.firebaseapp.com",
 
-    projectId: "YOUR_PROJECT_ID",
+    projectId: "ok-mobile-13",
 
-    storageBucket: "YOUR_PROJECT.appspot.com",
+    storageBucket: "ok-mobile-13.firebasestorage.app",
 
-    messagingSenderId: "YOUR_SENDER_ID",
+    messagingSenderId: "880242162214",
 
-    appId: "YOUR_APP_ID"
+    appId: "1:880242162214:web:00d7aa24c7ebdc278e04e7"
 
 };
-
-/*==================================================
-INITIALIZE
-==================================================*/
 
 const app = initializeApp(firebaseConfig);
 
@@ -42,10 +34,6 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 const storage = getStorage(app);
-
-/*==================================================
-EXPORTS
-==================================================*/
 
 export {
 
