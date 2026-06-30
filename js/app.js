@@ -341,12 +341,3 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 });
 
-/*==================================================
- EXPORTS
-==================================================*/
-
-export {
-
-    loadSettings
-
-};
