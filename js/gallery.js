@@ -303,12 +303,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/*==================================================
- EXPORTS
-==================================================*/
-
-export {
-
-    loadGallery
-
-};
