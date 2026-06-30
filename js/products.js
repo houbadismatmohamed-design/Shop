@@ -382,12 +382,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/*==================================================
- EXPORTS
-==================================================*/
-
-export {
-
-    loadProducts
-
-};
